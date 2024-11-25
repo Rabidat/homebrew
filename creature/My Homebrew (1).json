@@ -1,0 +1,903 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "MyHomebrew",
+				"abbreviation": "MHB",
+				"full": "My Homebrew",
+				"version": "1.0.0",
+				"authors": [
+					"Myself"
+				],
+				"convertedBy": [
+					"Me"
+				],
+				"color": "01fecb"
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "Screecher",
+			"source": "MyHomebrew",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 17,
+			"dex": 12,
+			"con": 14,
+			"int": 8,
+			"wis": 14,
+			"cha": 6,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Understands Abyssal but can't speak it"
+			],
+			"cr": "3",
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"CS"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"shortName": true,
+			"immune": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"deafened"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"will": [
+						"{@spell invisibility|XPHB}"
+					],
+					"daily": {
+						"1": [
+							"{@spell dispel magic|XPHB}",
+							"{@spell fog cloud|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"trait": [
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"The Screecher has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The Screecher has advantage on an attack roll against a creature if at least one of the Screecher's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The Screecher can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics",
+				"Spider Climb"
+			],
+			"action": [
+				{
+					"name": "Multiattack.",
+					"entries": [
+						"The Screecher makes two bite attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d8 + 6}) piercing damage, plus 7 ({@damage 2d6}) acid damage."
+					]
+				},
+				{
+					"name": "Thunderous Screech {@recharge 5}",
+					"entries": [
+						"The screecher creates an ear-splitting screech. Each creature within 30ft must make a {@dc 12} Constitution saving throw. On a failed save, a creature takes 21 ({@damage 6d6}) thunder damage and has the {@condition deafened} condition until the start of the screechers next turn. On a successful save a creature takes half as much damage. The screech can be heard within 300ft."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://5e.tools/img/bestiary/MPP/Farastu%20Demodand.webp"
+						}
+					}
+				]
+			},
+			"token": {
+				"name": "Farastu Demodand",
+				"source": "MPP"
+			},
+			"damageTags": [
+				"A",
+				"P",
+				"T"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Blood Zombie",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"source": "MyHomebrew",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				9
+			],
+			"hp": {
+				"formula": "4d8 + 8",
+				"average": 26
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 13,
+			"dex": 9,
+			"con": 14,
+			"int": 1,
+			"wis": 6,
+			"cha": 3,
+			"passive": 8,
+			"cr": "1/4",
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"languages": [
+				"Understands languages it knew in life but can't speak"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"trait": [
+				{
+					"name": "Blood Fury.",
+					"entries": [
+						"While it has 13 hit points or fewer, the blood lily zombie has advantage on attack rolls. In addition, it deals an extra 7 ({@damage 2d6}) damage to any target it hits with a melee attack."
+					]
+				},
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"If damage reduces the blood zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the blood zombie drops to 1 hit point instead."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) bludgeoning damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.dndbeyond.com/avatars/thumbnails/45138/845/1000/1000/638654817498204852.jpeg"
+						}
+					}
+				]
+			},
+			"damageTags": [
+				"B"
+			]
+		},
+		{
+			"name": "Ethereal Digby",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "MyHomebrew",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"mage armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 9",
+				"average": 49
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 14,
+			"cha": 12,
+			"passive": 12,
+			"cr": "6",
+			"level": 9,
+			"save": {
+				"int": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+7",
+				"history": "+7"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Ethereal Digby is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 15}, +7 to hit with spell attacks). Ethereal Digby has the following Wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt|XPHB}",
+								"{@spell mage hand|XPHB}",
+								"{@spell minor illusion|XPHB}",
+								"{@spell shocking grasp|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell absorb elements|XGE}",
+								"{@spell ice knife|XPHB}",
+								"{@spell magic missile|XPHB}",
+								"{@spell shield|XPHB}"
+							],
+							"slots": 3
+						},
+						"2": {
+							"spells": [
+								"{@spell invisibility|XPHB}",
+								"{@spell Melf's acid arrow|XPHB}",
+								"{@spell mirror image|XPHB}",
+								"{@spell misty step|XPHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell dispel magic|XPHB}",
+								"{@spell fireball|XPHB}",
+								"{@spell fly|XPHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell vitriolic sphere|XPHB}",
+								"{@spell wall of fire|XPHB}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell cone of cold|XPHB}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit +5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) Piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"MLW",
+				"THW"
+			],
+			"reaction": [
+				{
+					"name": "Shield",
+					"entries": [
+						"{@spell shield}"
+					]
+				},
+				{
+					"name": "Absorb Elements",
+					"entries": [
+						"{@spell absorb elements|xge}"
+					]
+				}
+			],
+			"isNamedCreature": true,
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"L",
+				"O",
+				"P"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Three Goblins in a Trenchcoat",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"source": "MyHomebrew",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d8 + 12",
+				"average": 66
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 13,
+			"int": 14,
+			"wis": 16,
+			"cha": 7,
+			"passive": 13,
+			"cr": "5",
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"trait": [
+				{
+					"name": "Literally Three Goblins",
+					"entries": [
+						"When Three Goblins in a Trenchcoat uses its action to make an attack, each living Goblin gets 1 attack action. When Three Goblins in a Trenchcoat drops below 33% HP (27) a random one of the goblins dies, then again when the monster drops below 15% HP (12). "
+					]
+				},
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"When the Top Goblin hits an enemy with a dagger attack, it may deal {@damage 2d6} extra damage if there is another goblin still alive in the trenchcoat."
+					]
+				}
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The Middle Goblin is a 4th-level spellcaster. Its spellcasting ability is WIS (spell save {@dc 13}, +6 to hit with spell attacks). The Middle Goblin has following Druid spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell create bonfire|XGE}",
+								"{@spell infestation|XGE}",
+								"{@spell poison spray|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds|XPHB}",
+								"{@spell earth tremor|XGE}"
+							],
+							"slots": 3
+						},
+						"2": {
+							"spells": [
+								"{@spell heat metal|XPHB}",
+								"{@spell spike growth|XPHB}"
+							],
+							"slots": 2
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"action": [
+				{
+					"name": "Fighter (Bottom Goblin)",
+					"entries": [
+						"Handaxe. Melee Weapon Attack: {@hit 6} to hit, reach 5 ft., 1 target. {@h} 7 ({@damage 1d6 + 3}) slashing damage. "
+					]
+				},
+				{
+					"name": "Druid (Middle Goblin)",
+					"entries": [
+						"Club. Melee Weapon Attack: {@hit 4} to hit, reach 5ft., 1 target. {@h}6 ({@damage 1d6 + 2}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Rogue (Top Goblin)",
+					"entries": [
+						"Dagger. Melee Weapon Attack: {@hit 5} to hit, reach 5ft. (20/60), 1 target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Actually Three Goblins",
+					"entries": [
+						" The goblins get one attack per goblin in the trenchcoat that is alive."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"I",
+				"P"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Mooper",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"bard"
+				]
+			},
+			"source": "MyHomebrew",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"Doc Martens"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d6",
+				"average": 21
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 10,
+			"int": 9,
+			"wis": 15,
+			"cha": 20,
+			"passive": 12,
+			"cr": "1",
+			"shortName": "Moop",
+			"languages": [
+				"Common",
+				"Spanish"
+			],
+			"languageTags": [
+				"C"
+			],
+			"save": {
+				"cha": "+7",
+				"wis": "+4"
+			},
+			"skill": {
+				"animal handling": "+4",
+				"deception": "+7",
+				"insight": "+4",
+				"persuasion": "+7"
+			},
+			"conditionImmune": [
+				"charmed"
+			],
+			"resist": [
+				"fire"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Mooper is a 3rd level spellcaster. Spellcasting ability is Charisma ({@dc 15}, +7 to hit.)"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell eldritch blast|XPHB}",
+								"{@spell friends}",
+								"{@spell vicious mockery|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell comprehend languages|XPHB}",
+								"{@spell healing word|XPHB}",
+								"{@spell sleep|XPHB}",
+								"{@spell Tasha's hideous laughter|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell borrowed knowledge|SCC}",
+								"{@spell pyrotechnics|XGE}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"trait": [
+				{
+					"name": "Eepy",
+					"entries": [
+						"When the Mooper feels safe, they must succeed a {@dc 7} Wisdom saving throw or fall asleep. The DC increases by 1 every hour of feeling safe."
+					]
+				},
+				{
+					"name": "Chronic Liar",
+					"entries": [
+						"When the Mooper is in a conversation they must succeed a {@dc 14} Wisdom saving throw. On a failure, the Mooper cannot resist lying to whoever the other conversationist is. "
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Stylus",
+					"entries": [
+						"The Mooper attacks ferociously with her stylus. {@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"environment": [
+				"urban"
+			],
+			"fluff": {
+				"entries": [
+					"Standing a mere 5 feet 1 inch tall, the Mooper is a quirky, small humanoid with an aura of chaotic charm. Its mischievous eyes seem to dance with unspoken jokes and secrets, leaving those it encounters unsure of what’s true and what’s a clever fabrication. Despite their odd habits, Moopers are surprisingly endearing and oddly resourceful, often weaving fantastical tales so convincingly that even they sometimes forget the truth. However, their penchant for spontaneous napping—dubbed \"eepying\" by those who know them—has thwarted more than a few of their own schemes. When not asleep or spinning wild yarns, Moopers can be formidable spellcasters, blending humor and trickery with potent magic. Few adventurers can claim to have met a Mooper and walked away without a memorable (if baffling) tale to tell."
+				]
+			},
+			"bonus": [
+				{
+					"name": "Platonic Charm",
+					"entries": [
+						"As a bonus action, the Mooper can increase friendly morale and lust with 60 ft. until the start of her next turn."
+					]
+				}
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://5e.tools/img/bestiary/tokens/HWCS/Jerbeen%20Thief.webp"
+			},
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"O",
+				"Y"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Big Guy",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "MyHomebrew",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor",
+						"kirkland sunglasses"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d8 + 18",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 12,
+			"int": 8,
+			"wis": 14,
+			"cha": 11,
+			"passive": 14,
+			"cr": "1",
+			"languages": [
+				"Common",
+				"Deep Speech"
+			],
+			"languageTags": [
+				"C",
+				"DS"
+			],
+			"con": 17,
+			"save": {
+				"con": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"insight": "+4",
+				"persuasion": "+2",
+				"perception": "+4",
+				"investigation": "+1"
+			},
+			"conditionImmune": [
+				"blinded"
+			],
+			"traitTags": [
+				"Amorphous",
+				"Flyby",
+				"Light Sensitivity"
+			],
+			"trait": [
+				{
+					"name": "Speak with Frogs and Toads",
+					"entries": [
+						"The big guy can communicate simple concepts to frogs and toads when it speaks in deep speech."
+					]
+				},
+				{
+					"name": "Light Sensitivity",
+					"entries": [
+						"While in bright light, the big guy has disadvantage on attack rolls and Wisdom ({@skill Perception}) checks that rely on sight. Wearing kirkland sunglasses negates the effects of this trait."
+					]
+				},
+				{
+					"name": "Congested",
+					"entries": [
+						"Every minute the big guy has to make a {@dc 10} constitution saving throw. On a failure, the big guy clears his throat."
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell primal savagery|XGE}",
+								"{@spell thaumaturgy|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell find familiar|XPHB} (frog)",
+								"{@spell shield|XPHB}",
+								"{@spell thunderwave|XPHB}"
+							],
+							"slots": 2
+						},
+						"2": {
+							"spells": [
+								"{@spell Maximilian's earthen grasp|XGE}",
+								"{@spell suggestion|XPHB}"
+							],
+							"slots": 1
+						}
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Accidental Moan",
+					"entries": [
+						"Each creature within 60 feet of the big guy that can hear its moan and that isn't an aberration must succeed on a {@dc 12} Wisdom saving throw or become {@condition frightened} until the end of the big guy's next turn. If a creature's saving throw is successful, the creature is immune to the big guy's moan for the next 24 hours."
+					]
+				},
+				{
+					"name": "Stone Fist",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) bludgeoning damage. The big guy uses the earth to bludgeon another creature."
+					]
+				}
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"bonus": [
+				{
+					"name": "Vocal Stim (1/day)",
+					"entries": [
+						"The big guy begins to stim making random noises. The big guy has advantage on Wisdom saving throws for 1 hour."
+					]
+				}
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://5e.tools/img/bestiary/tokens/HWCS/Mapach%20Tinkerer.webp"
+			},
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"T"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength",
+				"wisdom"
+			]
+		}
+	]
+}
